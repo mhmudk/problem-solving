@@ -1,28 +1,27 @@
 import java.util.Scanner;
+/*
+
+floor 10 / 3 = 3
+ceil 10 / 3 = 4
+round 10 / 3 = 3
+
+
+
+ */
 public class TwoNumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double  nO  = sc.nextDouble();
-        double  nT  = sc.nextDouble();
+        double numberOne = sc.nextDouble();
+        double numberTwo = sc.nextDouble();
 
-        int floor  = (int) (nO / nT);
-        System.out.println("floor " + (int)nO + " / "  +(int) nT + " = " + floor);
+        double floor =( numberOne / numberTwo) /10;
+        double ceil  =( numberOne  / numberTwo )   % 10 ;
 
+        // TODO floor will take the first  like that --->   10/3 = 3.3 ---> 3
+        // TODO
 
-
-        double  checkModule   =  nO %  nT    ;
-        int  ceil  = (int) (nO / nT) ;
-        if(checkModule >0 ){
-            ceil++;
-        }
-        System.out.println("ceil " + (int)nO + " / "  +(int) nT + " = " + ceil);
-
-        int round  = (int) (nO / nT);
-        int roundModulo = (int) (((nO / nT) * 10) % 10);
-        if(roundModulo >= 5 ){
-            round ++ ;
-        }
-        System.out.println("round " +(int) nO + " / "  +(int) nT + " = " + round);
+        System.out.println("floor is " + floor );
+        System.out.println("ceil is " + ceil );
 
 
     }
